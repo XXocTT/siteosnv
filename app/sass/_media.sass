@@ -1,0 +1,366 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1232px Start
++media-breakpoint-down(lg)
+
+	.main-carousel-slide
+		height: 400px
+	
+	.section-03
+		.btn-small
+			float: none
+			margin-top: 25px
+	
+	.map
+		height: 418px
+
+// ≥1232px End
+
+
+
+
+
+
+// ≥992px Start
++media-breakpoint-down(md)
+
+	.wrapper
+		padding-bottom: 30px
+
+	.main-container
+		.container
+			padding: 0px $gutter/2
+	
+	.head
+		.container-fluid
+			padding:
+				right: $gutter/2
+				left: 90px
+	
+	.navigation
+		position: fixed
+		left: -120px
+		height: 100%
+		width: 100%
+		top: 0
+		max-width: 360px
+		min-width: 320px
+		z-index: 9
+		overflow-y: auto
+		overflow-x: hidden
+		box-shadow: 5px 0px 5px 0px rgba(#030303, .2)
+		opacity: 0
+		display: none
+		& > .container
+			padding: 
+				top: 90px
+				bottom: 90px
+			position: relative
+			min-height: 100%
+			[class*="col-"]
+				padding: 0
+		&::before
+			display: none
+		a.logo
+			margin:
+				bottom: 30px
+				left: 15px
+		ul.mnu
+			float: none
+			width: 100%
+			li
+				float: none
+				width: 100%
+				& > a
+					width: 100%
+					height: auto
+					padding: 
+						top: 15px
+						bottom: 15px
+					border-top: 1px solid $accent
+					&:hover
+						background-color: rgba($accent, .4)
+					&.active
+						border-color: $dark
+				&:last-child
+					& > a
+						border-bottom: 1px solid $accent
+		a.phone
+			color: $dark
+			width: 100%
+			padding: 15px
+			border-bottom: 1px solid $accent
+			&:hover
+				opacity: 1
+				background-color: $accent
+			&:active
+				opacity: .6
+		.navigation-mobile-footer
+			width: 100%
+			background-color: $dark
+			flex: 0 0 100%
+			max-width: 100%
+			overflow: hidden
+			position: absolute
+			height: 91px
+			left: 0
+			bottom: 0
+			background-color: $dark
+			padding: 
+				top: 15px
+				left: 15px
+				right: 15px
+				bottom: 30px
+		ul.list-social-link
+			width: 100%
+			text-align: left
+			padding-top: 15px
+		.search
+			max-width: 100%
+	.mnu-dropdown
+		position: relative
+		top: 0
+		padding:
+			top: 0
+			bottom: 0
+		border-bottom: 1px solid $dark
+		margin-bottom: -1px
+		a
+			border: none
+			border-top: 1px solid $dark
+
+	.main-carousel-slide
+		height: 364px
+
+	.main-carousel, .carousel-01
+		.slick-dots
+			padding-bottom: 11px
+		.slick-arrow
+			&.slick-next
+				right: 15px
+			&.slick-prev
+				left: 15px
+
+	.map
+		height: 380px
+
+// ≥992px End
+
+
+
+
+
+
+// ≥768px Start
++media-breakpoint-down(sm)
+
+	body
+		font-size: 16px
+
+	.title
+		font-size: 32px
+
+	.title-thin, .title-small
+		font-size: 28px
+	
+	.subtitle
+		font-size: 22px
+	
+	a.btn-small, button.btn-small
+		font-size: 20px
+
+	a.btn, button.btn,
+	a.btn-v2, button.btn-v2,
+	a.btn-v4, button.btn-v4
+		font-size: 20px
+		min-width: 233px
+
+	.head
+		.list-social-link
+			display: none
+
+	.navigation
+		& > .container
+			padding-bottom: 128px
+		.navigation-mobile-footer
+			height: 129px
+
+	.main-carousel-slide
+		height: 272px
+
+	.main-carousel, .carousel-01
+		.slick-dots
+			li
+				button
+					width: 10px
+					height: 10px
+		.slick-arrow
+			width: 30px
+			height: 51px
+			&::before, &::after
+				background-size: 12px auto
+
+	.input-number-container
+		max-width: 100%
+
+	ul.breads-crumbs
+		padding-top: 0
+
+	.price
+		font-size: 32px
+
+	.section-servise
+		padding-bottom: 30px
+
+	.servise-header
+		padding-bottom: 30px
+	
+	ul.list-tabs
+		display: block
+		margin: 
+			left: -15px
+			right: -15px
+		li
+			width: 100%
+			float: none
+			a
+				width: 100%
+				height: auto
+				padding: 
+					top: 16px
+					bottom: 17px
+				&::after
+					height: 2px
+					background-color: $grey
+
+	.map
+		height: 320px
+
+	.section-before-surgery,
+	.section-after-surgery
+		.rows-box
+			margin-bottom: 14px
+
+// ≥768px End
+
+
+
+
+
+
+// ≥576px Start
++media-breakpoint-down(xs)
+
+	.wrapper
+		padding-bottom: 0
+
+	.title
+		font-size: 26px
+
+	.title-thin, .title-small
+		font-size: 22px
+	
+	.subtitle
+		font-size: 18px
+	
+	a.btn, button.btn,
+	a.btn-v2, button.btn-v2,
+	a.btn-v4, button.btn-v4
+		max-width: 100%
+		width: 100%
+
+	.head
+		a.phone
+			display: none
+	
+	.main-carousel-slide
+		height: 258px
+
+	.main-carousel, .carousel-01
+		.slick-arrow
+			display: none!important
+	
+	.servise-header
+		padding-left: 60px
+
+	.servise-header-img
+		max-width: 46px
+	
+	.popup-style
+		padding: 30px 15px
+		max-width: 420px
+	
+	.item-03-title
+		br
+			display: none
+
+	.map
+		height: 280px
+
+// ≥576px End
+
+
+
+
+
+
+// ≥450px Start
+@media only screen and (max-width : 450px)
+
+	.main-carousel-slide
+		height: 178px
+	
+	a.carousel-01-slide
+		height: 150px
+
+// ≥450px End
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+
+
+// ≥576px End
+
+
+
+
+
+
+// ≤768px
++media-breakpoint-up(md)
+
+
+
+// ≥768px End
+
+
+
+
+
+
+// ≤992px
++media-breakpoint-up(lg)
+
+	.navigation
+		opacity: 1!important
+		left: 0!important
+
+// ≥992px End
+
+
+
+
+
+
+// ≤1232px
++media-breakpoint-up(xl)
+
+
+
+// ≥1232px End

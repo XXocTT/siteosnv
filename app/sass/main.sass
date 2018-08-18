@@ -1,0 +1,1397 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+.preloader
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: 99999999
+	background-color: #ffffff
+	img
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		width: 92px
+		height: 92px
+
+::placeholder
+	color: $grey
+	opacity: 1
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+	background-color: #dddddd
+
+body
+	font-size: 18px
+	min-width: 320px
+	position: relative
+	line-height: 1
+	font-family: $default-font
+	overflow-x: hidden
+	color: $grey
+
+b, strong, h1, h2, h3, h4, h5, h6
+	font-weight: 800
+
+h1, h2, h3, h4, h5, h6, p, ul, li
+	padding: 0
+	margin: 0
+	list-style: none
+	list-style-type: none
+
+img.img-width
+	width: 100%
+
+a:link, button
+	display: inline-block
+	vertical-align: middle
+	outline: none!important
+	text-decoration: none
+	cursor: pointer
+	transition: $trs
+	&:active
+		transition: $trs-f
+
+a.link
+	color: $other
+	&:hover
+		opacity: .6
+	&:active
+		opacity: .3
+
+a.btn-small, button.btn-small
+	border: none
+	text-align: center
+	user-select: none
+	font-weight: 800
+	font-size: 25px
+	border-radius: 10em
+	min-width: 179px
+	border: 1px solid $accent
+	color: $dark
+	background-color: transparent
+	padding: 
+		left: 22px
+		right: 22px
+		top: 6px
+		bottom: 7px
+	&:hover
+		background-color: $accent
+	&:active
+		opacity: .6
+
+a.btn, button.btn
+	border: none
+	text-align: center
+	user-select: none
+	font-weight: 800
+	font-size: 25px
+	min-width: 263px
+	border-radius: 10em
+	color: $dark
+	border: 1px solid $dark
+	background-color: $accent
+	padding: 
+		left: 40px
+		right: 40px
+		top: 18px
+		bottom: 19px
+	&:hover
+		opacity: .6
+	&:active
+		opacity: .3
+
+a.btn-v2, button.btn-v2
+	border: none
+	text-align: center
+	user-select: none
+	font-weight: 800
+	font-size: 25px
+	min-width: 263px
+	border-radius: 10em
+	color: #ffffff
+	border: 1px solid $other
+	background-color: $other
+	padding: 
+		left: 40px
+		right: 40px
+		top: 18px
+		bottom: 19px
+	&:hover
+		opacity: .6
+	&:active
+		opacity: .3
+
+a.btn-v3, button.btn-v3
+	color: #ffffff
+	font-size: 16px
+	border: 1px solid #ffffff
+	background-color: transparent
+	text-align: center
+	user-select: none
+	padding:
+		left: 21px
+		right: 21px
+		top: 13px
+		bottom: 15px
+	border-radius: 10em
+	&:hover
+		opacity: .46
+	&:active
+		opacity: 1
+
+a.btn-v4, button.btn-v4
+	border: none
+	text-align: center
+	user-select: none
+	font-weight: 800
+	font-size: 25px
+	min-width: 263px
+	border-radius: 10em
+	color: $dark
+	border: 1px solid $dark
+	background-color: transparent
+	padding: 
+		left: 40px
+		right: 40px
+		top: 18px
+		bottom: 19px
+	&:hover
+		background-color: $accent
+	&:active
+		opacity: .6
+
+input.input-style, textarea.input-style
+	border: 1px solid $grey
+	outline: none
+	background-color: transparent
+	font-size: 18px
+	box-shadow: none
+	width: 100%
+	padding:
+		left: 26px
+		right: 26px
+		top: 0
+		bottom: 0
+	border-radius: 5px
+	transition: $trs
+	line-height: 58px
+	height: 60px
+	color: $dark
+	margin-bottom: 15px
+	&:focus
+		border-color: $dark
+
+textarea.input-style
+	resize: none
+	height: auto
+	min-height: 162px
+	line-height: 1
+	padding: 
+		top: 18px
+		bottom: 18px
+
+.ta-c
+	text-align: center
+
+.title
+	font-size: 50px
+	margin:
+		bottom: 24px
+		top: -6px
+	color: $dark
+
+.title-small
+	font-size: 40px
+	margin:
+		bottom: 24px
+		top: -6px
+	color: $dark
+
+.title-thin
+	font-weight: normal
+	font-size: 40px
+	margin:
+		bottom: 24px
+		top: -6px
+	color: $dark
+
+.subtitle
+	font-size: 30px
+	margin-top: -5px
+	color: $grey
+
+ul.breads-crumbs
+	display: inline-block
+	width: 100%
+	vertical-align: top
+	font-size: 14px
+	padding:
+		top: 27px
+		bottom: 12px
+	li
+		float: left
+		position: relative
+		padding-right: 30px
+		&::before
+			content: " "
+			position: absolute
+			right: 9px
+			top: 4px
+			bottom: 0
+			margin: auto
+			width: 12px
+			height: 9px
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: 100% auto
+			background-image: url("../img/arrow-right.svg")
+		&:last-child
+			padding-right: 0
+			a
+				pointer-events: none
+				cursor: default
+			&::before
+				display: none
+		a
+			color: $grey
+			&:hover
+				color: $dark
+			&:active
+				opacity: .6
+
+[class^="section-"]
+	padding: 
+		top: 30px
+		bottom: 30px
+
+
+
+
+
+
+.wrapper
+	width: 100%
+	min-height: 100%
+	overflow: hidden
+	background-color: #dddddd
+	padding: 60px 0px
+
+
+
+
+
+
+.main-container
+	background-color: #eeeeee
+	padding: 0
+	box-shadow: 0px 5px 5px 0px rgba(#030303, .2)
+	.container
+		padding: 0px 30px
+
+
+
+
+
+
+.head
+	background-color: $dark
+	position: fixed
+	padding: 7px 0px
+	left: 0
+	top: 0
+	width: 100%
+	height: 60px
+	overflow: hidden
+	min-width: 320px
+	color: #fff
+	z-index: 99
+	.container-fluid
+		padding: 0px 45px
+	a.phone
+		margin: 
+			left: 30px
+			right: 35px
+
+.search
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	padding-right: 42px
+	width: 100%
+	max-width: 290px
+	input
+		box-shadow: none
+		border-radius: 0
+		outline: none
+		background-color: transparent
+		font-size: 16px
+		line-height: 46px
+		height: 46px
+		border: none
+		border-bottom: 2px solid rgba(#ffffff, .46)
+		color: #ffffff
+		width: 100%
+		transition: $trs
+		&::placeholder
+			color: #fff
+		&:hover,&:focus
+			border-color: #ffffff
+	button
+		position: absolute
+		padding: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		height: 100%
+		width: 39px
+		border: none
+		background-color: transparent
+		background-size: 24px auto
+		background-repeat: no-repeat
+		background-position: 65% 50%
+		background-image: url("../img/search.svg")
+		opacity: .46
+		&:hover
+			opacity: 1
+		&:active
+			opacity: .46
+
+.head-contacts-box
+	float: right
+
+ul.list-social-link
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-right: 23px
+		&:last-child
+			margin-right: 0
+
+a.social-link
+	width: 32px
+	opacity: .46
+	color: #ffffff
+	img
+		width: 100%
+		height: auto
+	&:hover
+		opacity: 1
+	&:active
+		opacity: .46
+
+a.phone
+	font-weight: 800
+	font-size: 24px
+	white-space: nowrap
+	color: #ffffff
+	&:hover
+		opacity: .46
+	&:active
+		opacity: 1
+
+
+
+
+
+
+a.mnu-mobile-toggle
+	position: fixed
+	left: 0
+	top: 0
+	width: 60px
+	height: 60px
+	background-color: #000000
+	z-index: 999
+	span
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		background-color: #fff
+		border-radius: 50%
+		width: 5px
+		height: 5px
+		&::before, &::after
+			content: " "
+			position: absolute
+			width: 100%
+			height: 100%
+			background-color: inherit
+			border-radius: inherit
+			left: 0
+			right: 0
+			margin: auto
+			top: -8px
+		&::after
+			top: auto
+			bottom: -8px
+	&:active
+		opacity: .6
+
+
+
+
+
+
+.navigation
+	background-color: #ffffff
+	position: relative
+	z-index: 1
+	&::before
+		content: " "
+		position: absolute
+		z-index: 1
+		left: 0
+		width: 100%
+		height: 6px
+		bottom: -6px
+		background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%)
+
+a.logo
+	color: $grey
+	img
+		width: auto
+		height: 63px
+		display: inline-block
+		vertical-align: middle
+	strong
+		font-size: 27px
+		line-height: 0.8
+		display: inline-block
+		vertical-align: middle
+		max-width: 130px
+	&:active
+		opacity: .6
+
+ul.mnu
+	display: inline-block
+	vertical-align: middle
+	float: right
+	li
+		float: left
+		& > a
+			font-weight: 800
+			color: $dark
+			padding: 
+				left: 15px
+				right: 15px
+			background-color: transparent
+			height: 127px
+			font-size: 0
+			line-height: 0
+			&.active
+				background-color: $accent
+			span
+				display: inline-block
+				vertical-align: middle
+				font-size: 18px
+				line-height: 1
+			&::before
+				content: " "
+				display: inline-block
+				vertical-align: middle
+				height: 100%
+				width: 0
+			&:hover
+				background-color: $accent
+			&:active
+				opacity: .6
+
+
+
+
+
+
+.mnu-dropdown
+	background-color: $accent
+	position: absolute
+	width: 100%
+	left: 0
+	top: 127px
+	display: none
+	padding:
+		top: 30px
+		bottom: 15px
+	[class*="col"]
+		padding-bottom: 15px
+	a
+		color: $dark
+		border: 1px solid $dark
+		width: 100%
+		height: 100%
+		padding: 12px
+		&:hover
+			background-color: rgba(#ffffff, .6)
+		&:active
+			opacity: .6
+
+
+
+
+
+
+.main-carousel, .carousel-01
+	position: relative
+	z-index: 1
+	.slick-dots
+		bottom: 0
+		left: 0
+		padding-bottom: 26px
+		z-index: 1
+		li
+			width: auto
+			height: auto
+			margin: 4px
+			vertical-align: top
+			button
+				width: 20px
+				height: 20px
+				border-radius: 50%
+				border: 1px solid rgba(#ffffff, .4)
+				&:hover
+					border-color: #ffffff
+				&::before
+					display: none
+			&.slick-active
+				button
+					border-color: $accent
+					background-color: $accent
+	.slick-arrow
+		z-index: 1
+		background-color: rgba(#000000, .2)
+		border-radius: 5px
+		width: 42px
+		height: 72px
+		&:hover
+			background-color: rgba(#000000, .4)
+			&::after
+				opacity: 1
+		&:active
+			opacity: .6
+		&::before, &::after
+			content: " "
+			opacity: .6
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background-size: 20px auto
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			transition: $trs
+		&::after
+			opacity: 0
+		&.slick-next
+			right: 30px
+			&::before
+				background-image: url("../img/arrow-next-white.svg")
+			&::after
+				background-image: url("../img/arrow-next-accent.svg")
+		&.slick-prev
+			left: 30px
+			&::before
+				background-image: url("../img/arrow-prev-white.svg")
+			&::after
+				background-image: url("../img/arrow-prev-accent.svg")
+			
+
+.main-carousel.slick-dotted.slick-slider
+	margin-bottom: 35px
+
+.main-carousel-slide
+	height: 500px
+	width: 100%
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: 50% 50%
+
+
+
+
+
+
+.section-01
+	padding-bottom: 0px
+	.col-xl-3
+		padding-bottom: 30px
+
+a.item-01
+	color: $grey
+	padding: 15px
+	height: 100%
+	width: 100%
+	background-color: transparent
+	&:hover
+		background-color: #dddddd
+	&:active
+		opacity: .6
+
+.item-01-icon
+	display: block
+	position: relative
+	padding-bottom: 54%
+	margin-bottom: 15px
+	img
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		max-width: 100%
+		max-height: 100%
+
+.item-01-title
+	color: $dark
+
+.item-01-text
+	margin-top: 10px
+
+
+
+
+
+
+.section-02
+	text-align: center
+	background-color: $grey
+	color: #ffffff
+	.title
+		color: #ffffff
+	
+.big-video
+	width: 100%
+	max-width: 854px
+	margin: 0 auto
+	background-color: $grey
+	.big-video-box
+		padding-bottom: 56.208%
+		position: relative
+		z-index: 1
+		iframe
+			position: absolute
+			left: 0
+			top: 0
+
+
+
+
+
+
+.section-03
+	.subtitle
+		max-width: 458px
+		margin-bottom: 24px
+	.btn-small
+		float: right
+		margin-top: 6px
+
+.text-section-03
+	max-width: 1058px
+
+
+
+
+
+
+.section-04
+	.col-xl-3
+		padding-bottom: 30px
+
+a.item-02
+	position: relative
+	padding-bottom: 48px
+	width: 100%
+	height: 100%
+	color: $grey
+	&:hover
+		opacity: .6
+	&:active
+		opacity: .3
+
+.item-02-img
+	display: block
+	position: relative
+	padding-bottom: 66.6%
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	margin-bottom: 12px
+
+.item-02-title
+	color: $dark
+	margin-bottom: 10px
+
+.item-02-bottom
+	position: absolute
+	left: 0
+	bottom: 0
+	width: 100%
+	color: #ffffff
+	background-color: $grey
+	text-align: center
+	padding: 
+		bottom: 9px
+		top: 7px
+		left: 10px
+		right: 10px
+
+
+
+
+
+
+.section-05
+	background-color: lighten($grey, 40%)
+	.btn,.btn-v2
+		margin-top: 15px
+
+.after-calculator-result
+	display: none
+
+.weight-img
+	width: 100%
+	max-width: 300px
+	height: auto
+	margin-left: -16px
+
+.input-number-container
+	position: relative
+	width: 100%
+	max-width: 310px
+	padding-right: 47px
+	margin-bottom: 15px
+	input
+		font-size: 40px
+		text-align: center
+		&.invalid
+			border-color: red
+		&::-ms-clear
+			display: none
+			margin: 0
+			padding: 0
+		&::placeholder
+			font-size: 40px
+			text-align: center
+
+.input-number-info
+	text-align: center
+	padding: 
+		top: 5px
+	span
+		display: inline-block
+		vertical-align: middle
+		margin-left: 10px
+	img
+		height: 24px
+		width: auto
+		vertical-align: middle
+
+.input-number-arrow
+	position: absolute
+	right: 0
+	top: 0
+	height: 30px
+	width: 32px
+	img
+		position: absolute
+		width: 100%
+		height: auto
+		left: 0
+		top: 1px
+	&.input-number-minus
+		top: 30px
+		img
+			top: auto
+			bottom: 1px
+	&:hover
+		opacity: .6
+	&:active
+		opacity: .3
+
+.calculator-result
+	color: $dark
+	font-size: 18px
+	padding: 10px 0px
+	p
+		margin-top: 7px
+		&:first-child
+			margin-top: 0px
+
+
+
+
+
+
+.section-06
+	.title-small
+		margin-bottom: 6px
+
+.box-section-06-text
+	max-width: 485px
+	margin-bottom: 15px
+	strong
+		display: inline-block
+
+.textarea-inputFile-wrap
+	position: relative
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	margin-bottom: 15px
+	.input-style
+		margin-bottom: 0
+	label.file-box
+		position: absolute
+		bottom: 8px
+		right: 9px
+
+label.file-box
+	position: relative
+	overflow: hidden
+	outline: none
+	margin: 0
+	padding: 0
+	width: 36px
+	height: 31px
+	cursor: pointer
+	transition: $trs
+	&::before, &::after
+		content: " "
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: 24px auto
+		transition: $trs
+		background-image: url("../img/camera-icon.svg")
+		transition-delay: .45s
+	&::after
+		background-image: url("../img/check-icon.svg")
+		opacity: 0
+		top: 30%
+		transition-delay: .3s
+	&.active
+		&::before
+			opacity: 0
+			top: -30%
+			transition-delay: .3s
+		&::after
+			transition-delay: .45s
+			opacity: 1
+			top: 0
+	&:hover
+		opacity: .6
+	&:active
+		transition: $trs-f
+		opacity: .3
+	input
+		width: 0
+		height: 0
+		overflow: hidden
+		opacity: 0
+		border: none
+		padding: 0
+		position: absolute
+		left: -999999px
+		top: -99px
+
+
+
+
+
+
+.section-servise
+	padding-bottom: 60px
+
+.servise-header
+	position: relative
+	padding:
+		left: 83px
+		bottom: 56px
+
+.servise-header-img
+	position: absolute
+	left: 0
+	top: 8px
+	width: 100%
+	max-width: 68px
+	img
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		max-width: 100%
+		max-height: 100%
+	&::before
+		content: " "
+		display: block
+		padding-bottom: 113.25%
+
+.servise-box
+	background-color: #ffffff
+	border: 1px solid #dddddd
+	box-sizing: 0px 0px 10px 0px rgba(#030303, .1)
+	padding: 
+		top: 15px
+		left: 15px
+		right: 15px
+	.old-price
+		margin-bottom: 5px
+	.price
+		margin-bottom: 24px
+	.btn-v2
+		width: 100%
+		min-width: 100%
+
+.old-price
+	color: #888888
+	display: inline-block
+	vertical-align: top
+	position: relative
+	&::before
+		content: " "
+		position: absolute
+		left: 0
+		width: 100%
+		top: 0
+		bottom: 0
+		margin: auto
+		height: 1px
+		background-color: #888888
+
+.price
+	font-weight: 800
+	color: $dark
+	font-size: 50px
+
+a.share-servise
+	display: block
+	margin: 
+		left: -15px
+		right: -15px
+		top: 15px
+	color: $grey
+	padding: 
+		left: 45px
+		right: 15px
+		top: 17px
+		bottom: 17px
+	position: relative
+	border-top: 1px solid #dddddd
+	&::before
+		content: " "
+		position: absolute
+		width: 21px
+		height: 24px
+		min-height: 100%
+		left: 15px
+		top: 0
+		background-size: 100% auto
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-image: url("../img/share.svg")
+	&:hover
+		background-color: #dddddd
+	&:active
+		opacity: .6
+
+
+
+
+
+
+.section-tabs
+	background-color: lighten($grey, 40%)
+	padding: 0
+
+ul.list-tabs
+	display: inline-block
+	vertical-align: top
+	li
+		float: left
+		a
+			color: $grey
+			padding: 
+				left: 15px
+				right: 15px
+			font-size: 0
+			line-height: 0
+			height: 100px
+			position: relative
+			&::before
+				content: " "
+				display: inline-block
+				vertical-align: middle
+				height: 100%
+				width: 0
+			&::after
+				content: " "
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 3px
+				transition: $trs
+				background-color: transparent
+			&:hover
+				color: $dark
+				&::after
+					background-color: $dark
+			&:active
+				opacity: .6
+			span
+				display: inline-block
+				vertical-align: middle
+				font-size: 18px
+				line-height: 1
+		&.active
+			a
+				color: $other
+				opacity: 1
+				&::after
+					background-color: $other
+
+
+
+
+
+.section-tabs-views
+	padding-top: 0
+
+.tabs-view
+	.title-small
+		margin-top: 26px
+		&+p
+			margin-top: 0
+	p+p
+			margin-top: 18px
+
+.rows-box
+	background-color: #ffffff
+	padding: 
+		left: 15px
+		right: 15px
+	.row
+		padding: 
+			left: 5px
+			right: 5px
+			top: 27px
+			bottom: 27px
+		border-bottom: 1px solid lighten($grey, 40%)
+		&:last-child
+			border-bottom-color: #ffffff
+
+
+
+
+
+
+.section-07
+	padding-bottom: 15px
+	.col-xl-3
+		padding-bottom: 15px
+
+a.item-03
+	width: 100%
+	color: $grey
+	background-color: transparent
+	height: 100%
+	padding:
+		top: 15px
+		left: 15px
+		right: 15px
+		bottom: 12px
+	&:hover
+		background-color: #e1e1e1
+	&:active
+		opacity: .6
+
+.item-03-img
+	display: block
+	padding-bottom: 138%
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+	margin-bottom: 10px
+
+.item-03-title
+	font-weight: 800
+	line-height: 1.32
+	color: $dark
+	margin-bottom: 5px
+
+.item-03-post
+	line-height: 1.32
+	color: $dark
+	margin-bottom: 8px
+
+
+
+
+
+
+.section-contacts
+	.container-fluid
+		.col-12
+			padding: 0
+
+.contacts-box
+	margin-bottom: 15px
+
+.work-time
+	position: relative
+	padding-left: 40px
+
+img.work-time-icon
+	position: absolute
+	left: 0
+	top: 0
+	width: 32px
+	height: auto
+
+.map
+	width: 100%
+	max-width: 100%
+	overflow: hidden
+	height: 518px
+	background-color: $grey
+	margin-top: 15px
+
+.mark
+	display: block
+	background-color: #ffffff
+	box-sizing: border-box
+	position: relative
+	width: 178px
+	height: 63px
+	text-align: center
+	padding:
+		left: 10px
+		right: 10px
+		top: 10px
+		bottom: 10px
+	line-height: .8
+	font-size: 18px
+	color: $grey
+	border-radius: 10em
+	&::before
+		content: " "
+		position: absolute
+		border: 17px solid transparent
+		width: 17px
+		border-top-color: #ffffff
+		border-right-width: 8.5px
+		border-left-width: 8.5px
+		left: 0
+		right: 0
+		margin: auto
+		bottom: -34px
+	img
+		height: 42px
+		width: auto
+		vertical-align: middle
+	strong
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+		font-weight: 800
+		max-width: 88px
+		margin-left: 7px
+
+
+
+
+
+
+.section-before-surgery,
+.section-after-surgery
+	padding-top: 0
+	.rows-box
+		margin-bottom: 28px
+
+
+
+
+
+
+.section-07
+	padding-bottom: 60px
+	.container-fluid
+		.col-12
+			padding: 0
+	.btn-v4
+		margin-top: 60px
+
+a.carousel-01-slide
+	height: 175px
+	position: relative
+	img
+		height: 100%
+		width: auto
+	&::before
+		content: " "
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-color: rgba($dark, .6)
+		transition: $trs
+		background-size: 24px auto
+		background-repeat: no-repeat
+		background-position: 50% 55%
+		background-image: url(../img/search.svg)
+		opacity: 0
+	&:hover
+		&::before
+			opacity: 1
+			background-position: 50% 50%
+	&:active
+		opacity: .6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer
+	background-color: $dark
+	color: #888888
+	padding: 
+		top: 28px
+		bottom: 30px
+	
+
+
+
+
+
+.popup-style
+	position: relative
+	margin: 6px auto
+	background-color: #eeeeee
+	border-radius: 5px
+	max-width: 615px
+	padding: 30px 30px
+	.title-small
+		margin-bottom: 6px
+	&#thank
+		text-align: center
+		max-width: 420px
+		padding: 
+			top: 60px
+			bottom: 60px
+		.box-popup-subtitle
+			margin:
+				bottom: 0
+				left: auto
+				right: auto
+			max-width: 320px
+	&#popup-service, &#popup-share
+		max-width: 420px
+		text-align: center
+		.likely
+			margin-top: 6px
+		.likely__widget
+			transition: $trs
+			width: 100%
+			color: $grey
+			border-radius: 5px
+			border: 1px solid $grey
+			margin:
+				left: 0
+				right: 0
+				bottom: 6px
+			&:hover
+				color: $dark
+				border-color: $dark
+
+.box-popup-subtitle
+	margin-bottom: 15px
+	max-width: 485px
+	strong
+		display: inline-block
+
+
+
+
+
+
+button.mfp-close
+	font-size: 32px
+	color: $grey!important
+	opacity: 1
+	width: 34px
+	height: 34px
+	line-height: 34px
+	&:hover
+		color: $dark!important
+
+.mfp-image-holder
+	color: #ffffff
+
+.mfp-with-zoom .mfp-container
+	opacity: 0
+	transition: $trs
+	transform: scale(0.9)
+
+.mfp-with-zoom.mfp-bg
+	opacity: 0
+	-webkit-backface-visibility: hidden 
+	transition: $trs
+
+.mfp-with-zoom.mfp-ready .mfp-container
+		opacity: 1
+		transform: scale(1)
+
+.mfp-with-zoom.mfp-ready.mfp-bg
+		opacity: 0.8
+		background-color: $dark
+		transform: scale(1)
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg
+	opacity: 0
+.mfp-with-zoom.mfp-removing .mfp-container
+	transform: scale(0.9)
+
+
+
+
+
+
+@import "media" // Always at the end
